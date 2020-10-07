@@ -13,14 +13,14 @@ module.exports = {
             .clickSeePriceButton()
 
         let singleSignUpPage = browser.page.SingleSignUpPage()
-        singleSignUpPage
-            .assertPageLoaded()
-            .clickGetQuote()
+        singleSignUpPage.verifyIfPageLoads()
 
         let signUpPage = browser.page.SignUpPage()
         signUpPage
             .assertPageLoaded()
             .clickDatePicker()
+            .selectNextMonth()
+            .selectValidDay()
             .pause(5000)
     }
 }

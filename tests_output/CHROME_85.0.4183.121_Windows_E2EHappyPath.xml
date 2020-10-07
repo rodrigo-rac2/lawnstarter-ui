@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="1"
-            failures="0"
+<testsuites errors="0"
+            failures="2"
             tests="1">
 
   <testsuite name="E2EHappyPath"
-    errors="1" failures="0" hostname="" id="" package="E2EHappyPath" skipped="0"
-    tests="1" time="14.32" timestamp="">
+    errors="0" failures="2" hostname="" id="" package="E2EHappyPath" skipped="0"
+    tests="1" time="22.07" timestamp="">
   
-    <testcase name="Happy Path" classname="E2EHappyPath" time="14.32" assertions="8">
+    <testcase name="Happy Path" classname="E2EHappyPath" time="22.07" assertions="11">
 
     
 
@@ -17,37 +17,24 @@
 
     
 
-    
+      <failure message="Timed out while waiting for element &lt;.ls-panel.ls-get-quote-form__panel&gt; to be present for 3000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (3021ms)">    at Page.verifyIfPageLoads (C:/rodrigo/lawnstarter-ui/lawnstarter-ui/pages/SingleSignUpPage.js:11:14)
+    at Object.HappyPath [as Happy Path] (C:/rodrigo/lawnstarter-ui/lawnstarter-ui/tests/E2EHappyPath.js:16:26)</failure>
 
     
 
     
 
     
-    <error message="Cannot read property &#39;mouseButtonClick&#39; of undefined" type="error"><![CDATA[
-    TypeError: Cannot read property &#39;mouseButtonClick&#39; of undefined
-    at Page.clickDatePicker (C:/rodrigo/ubiminds/lawnstarter-e2e/pages/SignUpPage.js:8:16)
-    at Object.HappyPath [as Happy Path] (C:/rodrigo/ubiminds/lawnstarter-e2e/tests/E2EHappyPath.js:23:14)
-    at Context.call (C:\rodrigo\ubiminds\lawnstarter-e2e\node_modules\nightwatch\lib\testsuite\context.js:379:35)
-    at TestCase.run (C:\rodrigo\ubiminds\lawnstarter-e2e\node_modules\nightwatch\lib\testsuite\testcase.js:49:31)
-    at Runnable.__runFn (C:\rodrigo\ubiminds\lawnstarter-e2e\node_modules\nightwatch\lib\testsuite\index.js:376:80)
-    at Runnable.run (C:\rodrigo\ubiminds\lawnstarter-e2e\node_modules\nightwatch\lib\testsuite\runnable.js:123:21)
-    at TestSuite.createRunnable (C:\rodrigo\ubiminds\lawnstarter-e2e\node_modules\nightwatch\lib\testsuite\index.js:443:33)
-    at TestSuite.handleRunnable (C:\rodrigo\ubiminds\lawnstarter-e2e\node_modules\nightwatch\lib\testsuite\index.js:448:18)
-    at C:\rodrigo\ubiminds\lawnstarter-e2e\node_modules\nightwatch\lib\testsuite\index.js:376:21
-    at processTicksAndRejections (internal/process/task_queues.js:93:5)
-    ]]></error>
+
+      <failure message="Timed out while waiting for element &lt;//div//span[@class=&#39;cell day&#39; and text()=&#39;1&#39;]&gt; to be present for 2000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (2130ms)">    at Page.selectValidDay (C:/rodrigo/lawnstarter-ui/lawnstarter-ui/pages/SignUpPage.js:24:14)
+    at Object.HappyPath [as Happy Path] (C:/rodrigo/lawnstarter-ui/lawnstarter-ui/tests/E2EHappyPath.js:23:14)</failure>
+
+    
+
     
     </testcase>
   
 
-  
-    <system-err>
-        TypeError: Cannot read property &#39;mouseButtonClick&#39; of undefined
-       at Page.clickDatePicker (C:/rodrigo/ubiminds/lawnstarter-e2e/pages/SignUpPage.js:8:16)
-       at Object.HappyPath [as Happy Path] (C:/rodrigo/ubiminds/lawnstarter-e2e/tests/E2EHappyPath.js:23:14)
-       at processTicksAndRejections (internal/process/task_queues.js:93:5)
-    </system-err>
   
 
     

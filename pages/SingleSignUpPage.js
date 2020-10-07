@@ -6,8 +6,13 @@ var actions = {
 }
 
 var asserts = {
-    assertPageLoaded: function () {
-        return this.waitForElementVisible('@form', 30000)
+    verifyIfPageLoads: function () {
+        return this
+            .waitForElementVisible('@form', 3000, false, result => {
+                if(result.value) {
+                    return this.clickGetQuote()
+                }
+            })
     }
 }
 
