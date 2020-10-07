@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="1">
+
+  <testsuite name="E2EHappyPath"
+    errors="1" failures="0" hostname="" id="" package="E2EHappyPath" skipped="0"
+    tests="1" time="14.32" timestamp="">
+  
+    <testcase name="Happy Path" classname="E2EHappyPath" time="14.32" assertions="8">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <error message="Cannot read property &#39;mouseButtonClick&#39; of undefined" type="error"><![CDATA[
+    TypeError: Cannot read property &#39;mouseButtonClick&#39; of undefined
+    at Page.clickDatePicker (C:/rodrigo/ubiminds/lawnstarter-e2e/pages/SignUpPage.js:8:16)
+    at Object.HappyPath [as Happy Path] (C:/rodrigo/ubiminds/lawnstarter-e2e/tests/E2EHappyPath.js:23:14)
+    at Context.call (C:\rodrigo\ubiminds\lawnstarter-e2e\node_modules\nightwatch\lib\testsuite\context.js:379:35)
+    at TestCase.run (C:\rodrigo\ubiminds\lawnstarter-e2e\node_modules\nightwatch\lib\testsuite\testcase.js:49:31)
+    at Runnable.__runFn (C:\rodrigo\ubiminds\lawnstarter-e2e\node_modules\nightwatch\lib\testsuite\index.js:376:80)
+    at Runnable.run (C:\rodrigo\ubiminds\lawnstarter-e2e\node_modules\nightwatch\lib\testsuite\runnable.js:123:21)
+    at TestSuite.createRunnable (C:\rodrigo\ubiminds\lawnstarter-e2e\node_modules\nightwatch\lib\testsuite\index.js:443:33)
+    at TestSuite.handleRunnable (C:\rodrigo\ubiminds\lawnstarter-e2e\node_modules\nightwatch\lib\testsuite\index.js:448:18)
+    at C:\rodrigo\ubiminds\lawnstarter-e2e\node_modules\nightwatch\lib\testsuite\index.js:376:21
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    ]]></error>
+    
+    </testcase>
+  
+
+  
+    <system-err>
+        TypeError: Cannot read property &#39;mouseButtonClick&#39; of undefined
+       at Page.clickDatePicker (C:/rodrigo/ubiminds/lawnstarter-e2e/pages/SignUpPage.js:8:16)
+       at Object.HappyPath [as Happy Path] (C:/rodrigo/ubiminds/lawnstarter-e2e/tests/E2EHappyPath.js:23:14)
+       at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    </system-err>
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>
