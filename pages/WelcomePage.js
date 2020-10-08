@@ -3,7 +3,11 @@ var actions = {
         // this.moveToElement('@btnContinuetoServices', null, null)
         // browser.mouseButtonClick('left')
 
-        return this.click(`@btnContinuetoServices`)
+        return this
+            .useXpath()
+            .waitForElementVisible(`//button//span[contains(text(),'continue to my services')]`)
+            .click(`//button//span[contains(text(),'continue to my services')]`)
+            .useCss()
     }
 }
 

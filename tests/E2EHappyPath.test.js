@@ -8,7 +8,7 @@ module.exports = {
             .loadPage()
             .setAddress(`1234 South Lamar Blvd`)
             .selectAutoCompleteSuggestion(1, browser) //select the first suggestion from autocomplete
-            .setName("Test User #11")
+            .setName("Test User #19")
             .setPhoneNumber("5555555555")
             .clickSeePriceButton()
 
@@ -21,7 +21,7 @@ module.exports = {
             .clickDatePicker()
             .selectNextMonth()
             .selectValidDay()
-            .setEmail('test12@test.com')
+            .setEmail('test19@test.com')
             .setCreditCardNumber('4111 1111 1111 1111')
             .selectValidCCMonth(browser)
             .selectValidCCYear(browser)
@@ -63,9 +63,9 @@ module.exports = {
             .assertPageLoaded()
             .clickContinuetoServices()
 
-        let recommendPage = browser.page.SignUpRecommendPage()
-        recommendPage
-            .verifyIfPageLoads()
-            .pause(30000)
+        // let recommendPage = browser.page.SignUpRecommendPage()
+        // recommendPage
+        //     .verifyIfPageLoads(browser)
+            .pause(300000)
     }
 }
