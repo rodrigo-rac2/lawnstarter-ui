@@ -6,17 +6,14 @@ var actions = {
             .click("//div[@class='vdp-datepicker ls-datepicker']")
             .useCss()
     },
-    clickTermsOfService: function () {
-        return this
+    clickTermsOfService: function (browser) {
+        this
             .useXpath()
-            // //     .waitForElementVisible("//div[@class='vdp-datepicker ls-datepicker']", 2000)
-            // //     .moveToElement("//div[@class='vdp-datepicker ls-datepicker']", 0, 0)
-            // //     .useCss()
+            .waitForElementVisible("//div//label[@for='terms-of-service']", 2000)
+            .moveToElement("//div//label[@for='terms-of-service']", 0, 0)
 
-            // // client.mouseButtonClick('left')
-            .waitForElementVisible(`//div//label[@for="terms-of-service"]//span[contains(text(),"I agree to the terms")]`, 2000)
-            .click(`//div//label[@for="terms-of-service"]//span[contains(text(),"I agree to the terms")]`)
-            .useCss()
+        browser.mouseButtonClick('left')
+        return this.useCss()
     },
     clickReserveBooking: function () {
         return this
@@ -123,8 +120,8 @@ module.exports = {
         cmbCCMonth: '#exp_month',
         cmbCCYear: '#exp_year',
         cmbLead: '#leadSource',
-        btnReserveBooking: '.ls-button.ls-button--block.ls-button--lg.ls-button--yellow.ls-reserve-booking__button'
-        //        chkBoxTermsofService: 'input[name=terms-of-service]'
+        btnReserveBooking: '.ls-button.ls-button--block.ls-button--lg.ls-button--yellow.ls-reserve-booking__button',
+        chkBoxTermsofService: '#terms-of-service'
         // addressInput: 'input[name=address]',
         // btnSeePrice: '.js-submitButton',
         // txtName: 'input[name=name]',

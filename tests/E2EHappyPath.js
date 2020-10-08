@@ -21,14 +21,19 @@ module.exports = {
             .clickDatePicker()
             .selectNextMonth()
             .selectValidDay()
-            .setEmail('test@test.com')
+            .setEmail('test8@test.com')
             .setCreditCardNumber('4111 1111 1111 1111')
             .selectValidCCMonth(browser)
             .selectValidCCYear(browser)
             .setCCCVC('111')
+            .clickTermsOfService(browser)
             .selectValidLeadSource(browser)
-            .clickTermsOfService()
-            .clickReserveBooking()
-            .pause(5000)
+            .clickReserveBooking()        
+
+        let propertyPage = browser.page.PropertyPage()
+        propertyPage
+            .assertPageLoaded()
+            .setGateTrue(browser)
+            .pause(10000)
     }
 }
