@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
-            failures="2"
+            failures="1"
             tests="1">
 
   <testsuite name="E2EHappyPath.test"
-    errors="0" failures="2" hostname="" id="" package="E2EHappyPath.test" skipped="0"
-    tests="1" time="361.2" timestamp="">
+    errors="0" failures="1" hostname="" id="" package="E2EHappyPath.test" skipped="0"
+    tests="1" time="370.4" timestamp="">
   
-    <testcase name="Happy Path" classname="E2EHappyPath.test" time="361.2" assertions="28">
+    <testcase name="Happy Path" classname="E2EHappyPath.test" time="370.4" assertions="27">
 
     
 
@@ -17,19 +17,16 @@
 
     
 
-      <failure message="Timed out while waiting for element &lt;.ls-panel.ls-get-quote-form__panel&gt; to be present for 3000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (3123ms)">    at Page.verifyIfPageLoads (C:/rodrigo/lawnstarter-ui/pages/SingleSignUpPage.js:11:14)
-    at Object.HappyPath [as Happy Path] (C:/rodrigo/lawnstarter-ui/tests/E2EHappyPath.test.js:16:26)</failure>
-
     
 
     
 
     
 
-      <failure message="Timed out while waiting for element &lt;//div//span[@class=&#39;cell day&#39; and text()=&#39;1&#39;]&gt; to be present for 2000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (2087ms)">    at Page.selectValidDay (C:/rodrigo/lawnstarter-ui/pages/SignUpPage.js:73:14)
+    
+
+      <failure message="Timed out while waiting for element &lt;//div//span[@class=&#39;cell day&#39; and text()=&#39;1&#39;]&gt; to be present for 2000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (2083ms)">    at Page.selectValidDay (C:/rodrigo/lawnstarter-ui/pages/SignUpPage.js:73:14)
     at Object.HappyPath [as Happy Path] (C:/rodrigo/lawnstarter-ui/tests/E2EHappyPath.test.js:23:14)</failure>
-
-    
 
     
 

@@ -63,9 +63,10 @@ module.exports = {
             .assertPageLoaded()
             .clickContinuetoServices()
 
-        // let recommendPage = browser.page.SignUpRecommendPage()
-        // recommendPage
-        //     .verifyIfPageLoads(browser)
+        let servicePage = browser.page.ServicesPage()
+        welcomePage
+            .assertPageLoaded()
+            .signOut()
             .pause(300000)
     }
 }
