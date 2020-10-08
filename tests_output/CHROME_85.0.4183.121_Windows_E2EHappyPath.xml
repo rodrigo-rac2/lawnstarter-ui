@@ -5,9 +5,9 @@
 
   <testsuite name="E2EHappyPath"
     errors="0" failures="2" hostname="" id="" package="E2EHappyPath" skipped="0"
-    tests="1" time="22.07" timestamp="">
+    tests="1" time="27.29" timestamp="">
   
-    <testcase name="Happy Path" classname="E2EHappyPath" time="22.07" assertions="11">
+    <testcase name="Happy Path" classname="E2EHappyPath" time="27.29" assertions="18">
 
     
 
@@ -17,7 +17,7 @@
 
     
 
-      <failure message="Timed out while waiting for element &lt;.ls-panel.ls-get-quote-form__panel&gt; to be present for 3000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (3021ms)">    at Page.verifyIfPageLoads (C:/rodrigo/lawnstarter-ui/lawnstarter-ui/pages/SingleSignUpPage.js:11:14)
+      <failure message="Timed out while waiting for element &lt;.ls-panel.ls-get-quote-form__panel&gt; to be present for 3000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (3438ms)">    at Page.verifyIfPageLoads (C:/rodrigo/lawnstarter-ui/lawnstarter-ui/pages/SingleSignUpPage.js:11:14)
     at Object.HappyPath [as Happy Path] (C:/rodrigo/lawnstarter-ui/lawnstarter-ui/tests/E2EHappyPath.js:16:26)</failure>
 
     
@@ -26,8 +26,22 @@
 
     
 
-      <failure message="Timed out while waiting for element &lt;//div//span[@class=&#39;cell day&#39; and text()=&#39;1&#39;]&gt; to be present for 2000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (2130ms)">    at Page.selectValidDay (C:/rodrigo/lawnstarter-ui/lawnstarter-ui/pages/SignUpPage.js:24:14)
+      <failure message="Timed out while waiting for element &lt;//div//span[@class=&#39;cell day&#39; and text()=&#39;1&#39;]&gt; to be present for 2000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (2134ms)">    at Page.selectValidDay (C:/rodrigo/lawnstarter-ui/lawnstarter-ui/pages/SignUpPage.js:71:14)
     at Object.HappyPath [as Happy Path] (C:/rodrigo/lawnstarter-ui/lawnstarter-ui/tests/E2EHappyPath.js:23:14)</failure>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
 

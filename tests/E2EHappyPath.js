@@ -21,6 +21,14 @@ module.exports = {
             .clickDatePicker()
             .selectNextMonth()
             .selectValidDay()
+            .setEmail('test@test.com')
+            .setCreditCardNumber('4111 1111 1111 1111')
+            .selectValidCCMonth(browser)
+            .selectValidCCYear(browser)
+            .setCCCVC('111')
+            .selectValidLeadSource(browser)
+            .clickTermsOfService()
+            .clickReserveBooking()
             .pause(5000)
     }
 }
