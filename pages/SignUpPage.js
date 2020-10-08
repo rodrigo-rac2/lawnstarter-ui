@@ -122,9 +122,6 @@ module.exports = {
         cmbLead: '#leadSource',
         btnReserveBooking: '.ls-button.ls-button--block.ls-button--lg.ls-button--yellow.ls-reserve-booking__button',
         chkBoxTermsofService: '#terms-of-service'
-        // addressInput: 'input[name=address]',
-        // btnSeePrice: '.js-submitButton',
-        // txtName: 'input[name=name]',
-        // txtPhone:'input[name=phone]'
+
     }
 }

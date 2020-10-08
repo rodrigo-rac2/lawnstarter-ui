@@ -1,7 +1,8 @@
 var actions = {
-    clickGetQuote: function () {
+    clickDone: function () {
         return this
-            .click('@btnGetQuote')
+            .waitForElementVisible(`@btnDone`)
+            .click('@btnDone')
     }
 }
 
@@ -10,7 +11,7 @@ var asserts = {
         return this
             .waitForElementVisible('@form', 3000, false, result => {
                 if(result.value) {
-                    return this.clickGetQuote()
+                    return this.clickDone()
                 }
             })
     }
@@ -20,7 +21,7 @@ var asserts = {
 module.exports = {
     commands: [actions, asserts],
     elements: {
-        form: '.ls-panel.ls-get-quote-form__panel',
-        btnGetQuote: '.ls-button'
+        form: '.column.is-11.nextdoor-modal--info-wrapper',
+        btnDone: '.is-size-5.has-text-weight-bold.is-uppercase.has-text-white'
     }
 }
