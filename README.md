@@ -1,14 +1,13 @@
 # lawnstarter-ui with Nightwatch.js
  Lawnstarter UI Tests
 
-# install with 
+# To install the package 
 npm install 
 
-# to run the tests
+# To run the tests
 npm test
 
 # remarks:
-
 1) Erratic extra confirmation page 
 # sometimes a confirmation page loads after the initial sign up process. SingleSinUpPage has been 
 # implemented to handle this. If this page doesn't load, this test step will fail but will not stop the execution
