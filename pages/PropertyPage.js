@@ -20,13 +20,13 @@ var actions = {
     },
     setGateProperties: function (lockType, wide, gateCode, browser) { //to be improved
         browser.execute(function setGateProp() {
-            document.querySelector(`input[type="radio"][value="code"]`).click();
+            document.querySelector(`input[type="radio"][value="key"]`).click();
 
-            let codes = document.querySelectorAll(`input[type="text"][name="lock_gate_input-code"]`)
-            codes.forEach(element => {
-                element.click()
-                element.value = "1213"
-            })
+            // let codes = document.querySelectorAll(`input[type="text"][name="lock_gate_input-code"]`)
+            // codes.forEach(element => {
+            //     element.click()
+            //     element.value = "1213"
+            // })
 
             document.querySelector(`.under-48`).click();
         })

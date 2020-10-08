@@ -8,7 +8,7 @@ module.exports = {
             .loadPage()
             .setAddress(`1234 South Lamar Blvd`)
             .selectAutoCompleteSuggestion(1, browser) //select the first suggestion from autocomplete
-            .setName("Test User 23")
+            .setName("Test User 24")
             .setPhoneNumber("5555555555")
             .clickSeePriceButton()
 
@@ -21,7 +21,7 @@ module.exports = {
             .clickDatePicker()
             .selectNextMonth()
             .selectValidDay()
-            .setEmail('test23@test.com')
+            .setEmail('test24@test.com')
             .setCreditCardNumber('4111 1111 1111 1111')
             .selectValidCCMonth(browser)
             .selectValidCCYear(browser)
