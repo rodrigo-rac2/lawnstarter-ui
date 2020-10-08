@@ -1,50 +1,80 @@
 var actions = {
-    setGate: function (value) {
-        return this
-            // .waitForElementVisible(`@rdBtnGate_${value}`, 2000)
-            // .click(`@rdBtnGate_${value}`)
-
-            .useXpath()
-            .waitForElementVisible(`//input[@name="gate.has_gate" and @value="${value}"]`, 2000)
-            .click(`//input[@name="gate.has_gate" and @value=${value}]`)
-            .useCss()
-    },
-    setGateTrue: function (browser) {
-        this
-            .useXpath()
-            .waitForElementVisible(`//div//label[contains(text(),"Do you have a gate?")]`, 2000)
-            .moveToElement(`//div//label[contains(text(),"Do you have a gate?")]`, 250, 0)
-            .useCss()
-
-        browser.mouseButtonClick('left')
-        return this
-    },
-    setMultiTenant: function (value) {
-        //        return this
-        // .waitForElementVisible(`@rdBtnMultiT_${value}`, 2000)
-        // .click(`@rdBtnMultiT_${value}`)
+    setGate: function (value, browser) {
+        if (value) {
+            browser.execute(function setGate() {
+                let element = document.querySelector(`input[type="radio"][name="gate.has_gate"][value="true"]`);
+                let parentElement = element.parentElement;
+                //                parentElement.setAttribute("class", "b-radio radio button is-primary is-medium")
+                parentElement.click()
+            })
+        }
+        else {
+            browser.execute(function setGate() {
+                let element = document.querySelector(`input[type="radio"][name="gate.has_gate"][value="false"]`);
+                let parentElement = element.parentElement;
+                parentElement.click()
+            })
+        }
 
         return this
-            .useXpath()
-            .waitForElementVisible(`//input[@name="multitenant.is_multitenant" and @value="${value}"]`, 2000)
-            .click(`//input[@name="multitenant.is_multitenant" and @value=${value}]`)
-            .useCss()
     },
-    setCommunityRestricted: function (value) {
+    setGateProperties: function (lockType, wide, gateCode, browser) { //to be improved
+        browser.execute(function setGateProp() {
+            document.querySelector(`input[type="radio"][value="code"]`).click();
+
+            let codes = document.querySelectorAll(`input[type="text"][name="lock_gate_input-code"]`)
+            codes.forEach(element => {
+                element.click()
+                element.value = "1213"
+            })
+
+            document.querySelector(`.under-48`).click();
+        })
+
         return this
-            .useXpath()
-            .waitForElementVisible(`//input[@name="community.restricted" and @value="${value}"]`, 2000)
-            .click(`//input[@name="community.restricted" and @value="${value}"]`)
-            .useCss()
     },
-    setLawnMaintenanceType: function (type) {
+    setMultiTenant: function (value, browser) {
+        if (value) {
+            browser.execute(function setTenant() {
+                let element = document.querySelector(`input[type="radio"][name="multitenant.is_multitenant"][value="true"]`);
+                let parentElement = element.parentElement;
+                parentElement.click();
+            })
+        }
+        else {
+            browser.execute(function setTenant() {
+                let element = document.querySelector(`input[type="radio"][name="multitenant.is_multitenant"][value="false"]`);
+                let parentElement = element.parentElement;
+                parentElement.click();
+            })
+        }
+
         return this
-            .useXpath()
-            .waitForElementVisible(`//input[@name="mowing_preferences.scope" and @value="${type}"]`, 2000)
-            .click(`//input[@name="mowing_preferences.scope" and @value="${type}"]`)
-            .useCss()
-        // .waitForElementVisible(`@rdBtn_${type}`, 2000)
-        // .click(`@rdBtn_${type}`)
+    },
+    setCommunityRestricted: function (value, browser) {
+        if (value) {
+            browser.execute(function setCommunity() {
+                let element = document.querySelector(`input[type="radio"][name="community.restricted"][value="true"]`);
+                let parentElement = element.parentElement;
+                parentElement.click();
+            })
+        }
+        else {
+            browser.execute(function setCommunity() {
+                let element = document.querySelector(`input[type="radio"][name="community.restricted"][value="false"]`);
+                let parentElement = element.parentElement;
+                parentElement.click();
+            })
+        }
+
+        return this
+    },
+    setLawnMaintenanceType: function (type, browser) {
+        browser.execute(function setMaintenance() {
+            document.querySelector(`input[type="radio"][name="mowing_preferences.scope"][value="frontonly"]`).click();
+        })
+
+        return this
     },
     clickSaveandContinue() {
         return this

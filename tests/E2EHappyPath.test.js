@@ -8,7 +8,7 @@ module.exports = {
             .loadPage()
             .setAddress(`1234 South Lamar Blvd`)
             .selectAutoCompleteSuggestion(1, browser) //select the first suggestion from autocomplete
-            .setName("Test User 1")
+            .setName("Test User 23")
             .setPhoneNumber("5555555555")
             .clickSeePriceButton()
 
@@ -21,7 +21,7 @@ module.exports = {
             .clickDatePicker()
             .selectNextMonth()
             .selectValidDay()
-            .setEmail('test8@test.com')
+            .setEmail('test23@test.com')
             .setCreditCardNumber('4111 1111 1111 1111')
             .selectValidCCMonth(browser)
             .selectValidCCYear(browser)
@@ -33,7 +33,13 @@ module.exports = {
         let propertyPage = browser.page.PropertyPage()
         propertyPage
             .assertPageLoaded()
-            .setGateTrue(browser)
-            .pause(10000)
+            .setGate(true,browser)
+            .setGateProperties('code','u48','1234', browser)
+            .setMultiTenant(false,browser)
+            .setCommunityRestricted(false,browser)
+            .setLawnMaintenanceType(`frontonly`,browser)
+            .clickSaveandContinue()
+            .pause(30000)
+
     }
 }
