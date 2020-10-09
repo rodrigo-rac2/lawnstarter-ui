@@ -1,4 +1,4 @@
-# lawnstarter-ui with Nightwatch.js
+# lawnstarter-ui tests with Nightwatch.js
  Lawnstarter UI Tests
 
 # To install the package 
